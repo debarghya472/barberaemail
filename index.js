@@ -20,6 +20,9 @@ app.get('/',(req,res)=>{
        res.json({"result":"success"});
     }
 });
+app.get('/test',(req,res)=>{
+    res.send("HEllo Test")
+});
 
 app.listen(port, () => {
     console.log('Server started at port 2000....');
