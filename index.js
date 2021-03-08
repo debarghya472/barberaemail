@@ -14,6 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/',(req,res)=>{
+    res.send("Helli ")
+});
+app.post('/send',(req,res)=>{
     console.log(req.body.email);
     if(sendmail(req,res)){
        res.json({"result":"success"});
