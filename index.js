@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const config = require('./config/config');
 
-const creds = require('./config/client_secret.json');
 const path = require('path');
 const { email } = require('./config/config');
 
