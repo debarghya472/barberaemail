@@ -40,8 +40,9 @@ async function cancelsend(req,res){
     const emailbody = `
     <p><b>Your Booking has been Cancelled</b></p>
 
-    <p>Your Booking for the following services has been Cancelled</p>`+req.body.summary+`
-    
+    <p>Your Booking for the following services has been Cancelled</p><span style="white-space: pre-line">`+req.body.summary+`</span>
+    <br><p>Time and Date : `+req.body.datTime+`</p>
+    <p>Total Amount :  `+req.body.amount+`</p>
     <p>Regards<br>
     Team Barbera</p>
   `;
@@ -80,8 +81,9 @@ async function sendmail(req,res){
     const emailbody = `
     <p><b>Your Booking has been confirmed</b></p>
 
-    <p>Your Booking for the following services has been confirmed</p>`+req.body.summary+`
-    
+    <p>Your Booking for the following services has been confirmed</p><span style="white-space: pre-line">`+req.body.summary+`</span>
+    <br><p>Time and Date : `+req.body.datTime+`</p>
+    <p>Total Amount :  `+req.body.amount+`</p>
     <p>Regards<br>
     Team Barbera</p>
   `;
